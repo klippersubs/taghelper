@@ -1,25 +1,25 @@
 /**
- * Options for `merge` function.
+ * Options for `merge` function.
  * @see merge
  */
 export interface IMergeOptions {
     /**
-     * If `true`, template values will be converted to strings.
+     * If `true`, template values will be converted to strings.
      */
     stringify? : boolean;
 
     /**
-     * If `true`, raw values of strings will be used.
+     * If `true`, raw values of strings will be used.
      */
     raw? : boolean;
 }
 
 /**
- * Merges template strings and values arrays into one.
+ * Merge template strings and values arrays into one.
  * @param {string[]} strings — template strings.
  * @param {Array} rest — template values.
  * @param {IMergeOptions} [options] — options.
- * @returns {Array}
+ * @returns {Array} — two arrays merged into one.
  */
 export function merge (strings : TemplateStringsArray, rest : any[], options : IMergeOptions = {}) : any[] {
     const buff : any[] = [];
@@ -36,11 +36,11 @@ export function merge (strings : TemplateStringsArray, rest : any[], options : I
 }
 
 /**
- * Join both template strings and values into one string.
+ * Joins both template strings and values into one string.
  * @param {string[]} strings — template strings.
  * @param {Array} rest — template values.
- * @param {IMergeOptions} [options] — options for `merge` function. NB: `stringify` option is useless here.
- * @returns {string}
+ * @param {IMergeOptions} [options] — options for `merge` function. NB: `stringify` option is useless here.
+ * @returns {string} — resulting string.
  * @see merge
  */
 export function join (strings : TemplateStringsArray, rest : any[], options : IMergeOptions = {}) : string {
@@ -48,7 +48,7 @@ export function join (strings : TemplateStringsArray, rest : any[], options : IM
 }
 
 /**
- * Return `true`, if it looks like supplied parameters are template strings and values arrays.
+ * Returns `true`, if it looks like supplied parameters are template strings and values arrays.
  * @param {string[]} strings — template strings.
  * @param {Array} rest — template values.
  * @returns {boolean}

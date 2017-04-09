@@ -1,7 +1,7 @@
 {
     "name"            : "taghelper",
-    "version"         : "1.0.0",
-    "description"     : "Helper functions for creating template literal tags.",
+    "version"         : "1.0.1",
+    "description"     : "Helper functions for creating template literal tags.",
     "main"            : "index.js",
     "types"           : "index.d.ts",
     "repository"      : "aliceklipper/taghelper",
