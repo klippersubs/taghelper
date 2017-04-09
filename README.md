@@ -51,3 +51,7 @@ Returns: `boolean`.
 
  *  `stringify : boolean = false` — if `true`, template values will be converted to strings.
  *  `raw : boolean = false` — if `true`, raw values of strings will be used.
+
+## License
+
+MIT
