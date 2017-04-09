@@ -1,0 +1,24 @@
+{
+    "name"            : "taghelper",
+    "version"         : "1.0.0",
+    "description"     : "Helper functions for creating template literal tags.",
+    "main"            : "index.js",
+    "types"           : "index.d.ts",
+    "repository"      : "aliceklipper/taghelper",
+    "author"          : "Alice Klipper <alice.klipper@yandex.com> (https://vk.com/alice.klipper)",
+    "license"         : "MIT",
+    "scripts"         : {
+        "clean"       : "rimraf index.js index.js.map index.d.ts",
+        "prebuild"    : "yarn run clean",
+        "build"       : "tsc",
+        "prepublish"  : "yarn run build",
+        "postpublish" : "yarn run clean",
+        "lint"        : "tslint --project ./tsconfig.json --type-check ./src/**/*.{ts,tsx}"
+    },
+    "devDependencies" : {
+        "rimraf"                    : "^2.6.1",
+        "tslint"                    : "^4.5.1",
+        "tslint-config-rocketbroom" : "^1.5.4",
+        "typescript"                : "^2.2.2"
+    }
+}
