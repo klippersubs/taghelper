@@ -24,8 +24,8 @@ export interface IMergeOptions {
 export function merge (strings : TemplateStringsArray, rest : any[], options : IMergeOptions = {}) : any[] {
     const buff : any[] = [];
 
-    strings.forEach((item : any, index : number) => {
-        buff.push(options.raw ? item.raw : item);
+    (options.raw ? strings.raw : strings).forEach((item : any, index : number) => {
+        buff.push(item);
 
         if (index < rest.length) {
             buff.push(options.stringify ? '' + (rest[ index ] as string) : rest[ index ]);
